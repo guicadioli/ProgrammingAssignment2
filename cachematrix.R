@@ -1,7 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## cache matrix, store the inverse with superassignement, call the result if it
+##has been already calculated, if not it calculates and stores matrix.
 
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL  #m will store our 'inverse' and it's reset to NULL
@@ -16,7 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
   list(get=get, setsolve=setsolve,getsolve=getsolve)
 
 }
-## Write a short comment describing this function
+## Call cache solve if already calculated if not it solves matrix
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
 m<-x$getsolve() # accesses the object 'x' and gets the inverse
